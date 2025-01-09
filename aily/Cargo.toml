@@ -1,6 +1,6 @@
 [package]
 name = "aily"
-version = "0.0.1"
+version = "0.0.2"
 license="MIT"
 authors = ["Tuluobo <tuluobo@vip.qq.com>"]
 description="A ai api proxy library."
@@ -8,3 +8,11 @@ readme = "README.md"
 edition = "2021"
 
 [dependencies]
+log = "0.4"
+reqwest = { version = "0.12", features = ["stream"] }
+strum = { version = "0.26", features = ["derive"] }
+serde_json = "1"
+
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full"] }
