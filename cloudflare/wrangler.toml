@@ -1,0 +1,11 @@
+# wrangler.toml (wrangler v3.88.0^)
+
+name = "cloudflare"
+main = "build/worker/shim.mjs"
+compatibility_date = "2025-01-09"
+
+[build]
+command = "cargo install -q worker-build && worker-build --release"
+
+[observability.logs]
+enabled = true

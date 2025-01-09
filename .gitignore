@@ -72,4 +72,8 @@ Cargo.lock
 .history
 .ionide
 
+### wrangler
+node_modules
+.wrangler
+
 # End of https://www.toptal.com/developers/gitignore/api/macos,rust,visualstudiocode,idea

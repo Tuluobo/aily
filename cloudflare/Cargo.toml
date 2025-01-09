@@ -1,0 +1,25 @@
+[package]
+name = "cloudflare"
+version = "0.1.0"
+edition = "2021"
+authors = [ "Tuluobo <tuluobo@vip.qq.com>" ]
+
+[package.metadata.release]
+release = false
+
+# https://github.com/rustwasm/wasm-pack/issues/1247
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+log = "0.4"
+console_log = "1.0"
+worker = { version="0.5.0", features=['http'] }
+worker-macros = { version="0.5.0", features=['http'] }
+console_error_panic_hook = { version = "0.1.1" }
+futures = "0.3"
+
+aily = { path = "../aily" }
