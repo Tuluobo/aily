@@ -1,0 +1,10 @@
+[package]
+name = "aily"
+version = "0.0.1"
+license="MIT"
+authors = ["Tuluobo <tuluobo@vip.qq.com>"]
+description="A ai api proxy library."
+readme = "README.md"
+edition = "2021"
+
+[dependencies]
