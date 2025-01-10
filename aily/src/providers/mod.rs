@@ -17,6 +17,9 @@ pub trait Provider {
         let Some(body) = body else {
             return false;
         };
+        if body.is_empty() {
+            return false;
+        };
         match serde_json::from_slice::<serde_json::Value>(body) {
             Ok(body) => {
                 let Some(model_name) = body.get("model").and_then(|model| model.as_str()) else {
