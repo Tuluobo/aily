@@ -1,8 +1,9 @@
-/// OpenAI provider
-pub mod openai;
-
+/// Anthropic provider
+pub mod anthropic;
 /// DeepSeek provider
 pub mod deepseek;
+/// OpenAI provider
+pub mod openai;
 
 pub trait ModelID {
     fn identify(&self) -> &'static str;
@@ -25,7 +26,9 @@ pub trait Provider {
                 let Some(model_name) = body.get("model").and_then(|model| model.as_str()) else {
                     return false;
                 };
-                self.models().iter().any(|m| m.identify() == model_name)
+                self.models()
+                    .iter()
+                    .any(|m| model_name.starts_with(m.identify()))
             }
             Err(error) => {
                 log::error!("body deserialize error: {:?}, body: {:?}", error, body);

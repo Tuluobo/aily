@@ -14,7 +14,7 @@ Add the following to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-aily = "0.1.0"
+aily = "0.0.3"
 ```
 
 ## Usage

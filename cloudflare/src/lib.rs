@@ -29,8 +29,8 @@ async fn fetch(mut req: Request, env: Env, _ctx: Context) -> Result<Response> {
         .with_credentials(true)
         .with_origins(vec!["*"])
         .with_methods(Method::all())
-        .with_allowed_headers(vec!["Content-Type", "Authorization"])
-        .with_exposed_headers(vec!["Content-Type", "Authorization"])
+        .with_allowed_headers(vec!["*"])
+        .with_exposed_headers(vec!["*"])
         .with_max_age(86400);
 
     // Check if request is preflight

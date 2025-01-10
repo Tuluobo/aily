@@ -1,4 +1,4 @@
-use crate::providers::{deepseek, openai, Provider};
+use crate::providers::{anthropic, deepseek, openai, Provider};
 use reqwest::header::HeaderMap;
 use reqwest::{Body, Method, Response, Url};
 
@@ -11,7 +11,11 @@ impl Client {
     pub fn new() -> Self {
         Self {
             inner: reqwest::Client::new(),
-            providers: vec![Box::new(openai::OpenAI), Box::new(deepseek::DeepSeek)],
+            providers: vec![
+                Box::new(deepseek::DeepSeek),
+                Box::new(anthropic::Anthropic),
+                Box::new(openai::OpenAI),
+            ],
         }
     }
 

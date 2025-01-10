@@ -1,9 +1,9 @@
 [package]
 name = "aily"
-version = "0.0.2"
+version = "0.0.3"
 license="MIT"
 authors = ["Tuluobo <tuluobo@vip.qq.com>"]
-description="A ai api proxy library."
+description="A library for building AI applications."
 readme = "README.md"
 edition = "2021"
 
